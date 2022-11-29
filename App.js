@@ -1,11 +1,20 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-
+// import { StatusBar } from 'expo-status-bar';
+import { useRef } from 'react';
+import { StyleSheet, Text, View, Dimensions, Button, StatusBar } from 'react-native';
+import { WebView } from 'react-native-webview';
+const width = Dimensions.get("screen").width;
 export default function App() {
+ 
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+
+      <WebView
+      style={{borderWidth: 1,width:width}}
+      source={{
+        uri: "https://v2.mintflick.app/homescreen/home"
+      }} />
+      {/* <Text style={{color: "white"}} >Open up App.js to start working on your app!!!!12</Text> */}
+      <StatusBar style="light" />
     </View>
   );
 }
@@ -13,8 +22,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#0f172a',
+    // marginTop: 
   },
 });
