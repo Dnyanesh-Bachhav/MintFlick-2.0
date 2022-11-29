@@ -13,7 +13,6 @@ export default function App() {
       source={{
         uri: "https://v2.mintflick.app/homescreen/home"
       }} />
-      {/* <Text style={{color: "white"}} >Open up App.js to start working on your app!!!!12</Text> */}
       <StatusBar style="light" />
     </View>
   );
